@@ -11,6 +11,7 @@
 		9FEB8C612517605000A65364 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB8C602517605000A65364 /* ContentView.swift */; };
 		9FEB8C632517605100A65364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB8C622517605100A65364 /* Assets.xcassets */; };
 		9FEB8C662517605100A65364 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB8C652517605100A65364 /* Preview Assets.xcassets */; };
+		9FF9C63B2517E05800F9BFC5 /* RingProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF9C63A2517E05800F9BFC5 /* RingProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		9FEB8C622517605100A65364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FEB8C652517605100A65364 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FEB8C672517605100A65364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF9C63A2517E05800F9BFC5 /* RingProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				9FEB8C5E2517605000A65364 /* ProgressViewStudyApp.swift */,
 				9FEB8C602517605000A65364 /* ContentView.swift */,
+				9FF9C63A2517E05800F9BFC5 /* RingProgressViewStyle.swift */,
 				9FEB8C622517605100A65364 /* Assets.xcassets */,
 				9FEB8C672517605100A65364 /* Info.plist */,
 				9FEB8C642517605100A65364 /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				9FEB8C612517605000A65364 /* ContentView.swift in Sources */,
 				9FEB8C5F2517605000A65364 /* ProgressViewStudyApp.swift in Sources */,
+				9FF9C63B2517E05800F9BFC5 /* RingProgressViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
