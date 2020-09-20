@@ -15,7 +15,7 @@ struct ContentView: View {
             Text("Progress View Styling")
                 .padding()
             ProgressView(value: progress)
-                .frame(width: 200.0, height: 200.0)
+                .frame(width: 50.0, height: 50.0)
                 .onTapGesture {
                     if progress < 1.0 {
                         withAnimation {
@@ -38,7 +38,14 @@ struct RingProgressViewStyle: ProgressViewStyle {
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
             Circle()
-                .stroke(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=Stroke Style@*/Color.blue/*@END_MENU_TOKEN@*/)
+                .stroke(Color(.systemGray5), style: StrokeStyle(lineWidth: 4.0))
+            
+            if let fractionCompleted = configuration.fractionCompleted {
+                Circle()
+                    .rotation(Angle(degrees: -90.0))
+                    .trim(from: 0.0, to: CGFloat(fractionCompleted))
+                    .stroke(Color(.systemBlue), style: StrokeStyle(lineWidth: 4.0, lineCap: .round))
+            }
         }
     }
 }
