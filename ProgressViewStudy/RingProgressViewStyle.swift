@@ -11,18 +11,14 @@ struct RingProgressViewStyle: ProgressViewStyle {
     let defaultWidth: CGFloat = 4.0
     let tint: Color
     
-    init() {
-        tint = Color.accentColor
-    }
-    
-    init(tint: Color) {
+    init(tint: Color = Color.accentColor) {
         self.tint = tint
     }
     
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
             Circle()
-                .stroke(Color(.systemGray5), style: StrokeStyle(lineWidth: defaultWidth))
+                .stroke(Color(.systemGray).opacity(0.4), style: StrokeStyle(lineWidth: defaultWidth))
             
             if let fractionCompleted = configuration.fractionCompleted {
                 Circle()
