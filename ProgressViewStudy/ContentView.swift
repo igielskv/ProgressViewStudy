@@ -22,11 +22,10 @@ struct ContentView: View {
                 Spacer()
                 
                 ProgressView(value: progress)
-                    .frame(width: 30.0, height: 30.0)
+                    .frame(width: 40.0, height: 40.0)
                     .onTapGesture(perform: makeProgress)
-                    .progressViewStyle(RingProgressViewStyle(content: Color.accentColor))
+                    .progressViewStyle(RingProgressViewStyle(content: linearGradient, lineWidth: 5.0))
             }
-            
             
             ProgressView("LinearProgressViewStyle", value: progress)
                 .progressViewStyle(LinearProgressViewStyle())
