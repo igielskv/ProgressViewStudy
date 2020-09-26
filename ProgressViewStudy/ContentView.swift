@@ -17,29 +17,20 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 30.0) {
             HStack {
-                VStack(alignment: .leading) {
-                    Text("Progress View Styling")
-                        .font(.headline)
-                    Text("RingProgressViewStyle()")
-                        .foregroundColor(Color(.systemGray))
-                }
-                .padding(.trailing)
+                Text("RingProgressViewStyle")
+                
                 Spacer()
+                
                 ProgressView(value: progress)
                     .frame(width: 30.0, height: 30.0)
                     .onTapGesture(perform: makeProgress)
-                    .progressViewStyle(RingProgressViewStyle(tint: Color.purple))
+                    .progressViewStyle(RingProgressViewStyle(content: Color.accentColor))
             }
             
-            VStack(alignment: .leading) {
-                Text("System Default ProgressView")
-                    .font(.headline)
-                Text("LinearProgressViewStyle()")
-                    .foregroundColor(Color(.systemGray))
-                ProgressView(value: progress)
-                    .progressViewStyle(LinearProgressViewStyle())
-                    .onTapGesture(perform: makeProgress)
-            }
+            
+            ProgressView("LinearProgressViewStyle", value: progress)
+                .progressViewStyle(LinearProgressViewStyle())
+                .onTapGesture(perform: makeProgress)
             
             Button("Reset") {
                 progress = 0.0

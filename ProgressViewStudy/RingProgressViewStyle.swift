@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct RingProgressViewStyle: ProgressViewStyle {
+struct RingProgressViewStyle<S>: ProgressViewStyle where S: ShapeStyle {
     let defaultWidth: CGFloat = 4.0
-    let tint: Color
     
-    init(tint: Color = Color.accentColor) {
-        self.tint = tint
+    let content: S
+    
+    init(content: S) {
+        self.content = content
     }
     
     func makeBody(configuration: Configuration) -> some View {
@@ -24,7 +25,7 @@ struct RingProgressViewStyle: ProgressViewStyle {
                 Circle()
                     .rotation(Angle(degrees: -90.0))
                     .trim(from: 0.0, to: CGFloat(fractionCompleted))
-                    .stroke(tint, style: StrokeStyle(lineWidth: defaultWidth, lineCap: .round))
+                    .stroke(content, style: StrokeStyle(lineWidth: defaultWidth, lineCap: .round))
             }
         }
     }
