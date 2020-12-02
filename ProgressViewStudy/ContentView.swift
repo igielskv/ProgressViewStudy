@@ -51,7 +51,7 @@ struct ContentView: View {
                 .onTapGesture(perform: makeProgress)
             
             HStack {
-                Text("Actual 'progress' value: \(progress)")
+                Text("Actual 'progress' value: \(progress, specifier: "%0.2f")")
                 Spacer()
             }
             
